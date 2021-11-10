@@ -1,0 +1,14 @@
+This is the introduction challenge. Follow the instructions and call
+```bash
+    await contract.info
+```
+
+### Solution
+1) Get password (the method is public, so we can call it)
+```bash
+    await contract.password()
+```
+2) Copy the output and call
+```bash
+    await contract.authenticate("password")
+```
